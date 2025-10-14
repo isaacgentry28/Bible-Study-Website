@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Want a Bible Study?</title>
+  <meta name="description" content="Simple website to invite people to Bible studies—clear, friendly, and easy to contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --red-700:#b91c1c; /* main red from card */
+      --red-600:#dc2626;
+      --red-50:#fef2f2;
+      --ink:#1f2937;     /* gray-800 */
+      --ink-600:#374151;  /* gray-700 */
+      --link:#1e3a8a;    /* navy link */
+      --bg:#ffffff;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);}
+    a{color:var(--link)}
+    .btn{display:inline-block;background:var(--red-700);color:#fff;text-decoration:none;padding:.9rem 1.25rem;border-radius:.75rem;font-weight:700;letter-spacing:.2px;border:2px solid var(--red-700);}
+    .btn:hover{background:var(--red-600);border-color:var(--red-600)}
+    .btn-outline{background:transparent;color:var(--red-700)}
+    .wrapper{max-width:1100px;margin-inline:auto;padding:2rem;}
+    header{border-bottom:1px solid #eee;background:var(--bg);position:sticky;top:0;backdrop-filter:saturate(1.2) blur(8px)}
+    .brand{display:flex;align-items:center;gap:.75rem;font-weight:800;color:var(--red-700);}
+    .brand svg{width:36px;height:36px}
+    .nav{display:flex;align-items:center;justify-content:space-between;}
+    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:center;padding-block:3.5rem}
+    .hero-card{border-left:6px solid var(--red-700);padding:1.25rem 1.25rem 1.25rem 1.1rem;background:var(--red-50);border-radius:1rem}
+    .hero h1{font-size:clamp(1.8rem,3vw,2.6rem);margin:.5rem 0 0 0;line-height:1.15}
+    .lede{font-size:1.1rem;color:var(--ink-600);margin:.75rem 0 1.25rem}
+    .stack{display:flex;gap:.75rem;flex-wrap:wrap}
+    .card{border:1px solid #eee;border-radius:1rem;padding:1.25rem;background:#fff}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .verse{margin-top:3rem;color:#6b7280;font-size:.95rem;text-align:center}
+    footer{margin-top:3rem;background:var(--red-700);color:#fff}
+    footer .wrapper{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding-block:1.25rem}
+    .contact a{color:#fff;text-decoration:underline}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper nav">
+      <div class="brand" aria-label="Want a Bible Study">
+  <!-- Simple open book + cross icon -->
+  <img src="images/Bible%20Image.jpg" alt="Bible with cross logo (photo file: Bible Image.jpg)" width="96" height="96" loading="lazy">
+
+        <span>Want a Bible Study</span>
+      </div>
+      <nav>
+        <a class="btn btn-outline" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <section class="hero">
+      <div>
+        <div class="hero-card">
+          <strong style="color:var(--red-700);text-transform:uppercase;letter-spacing:.08em">Ask yourself</strong>
+          <h1>Are you interested in pleasing God but not sure what He wants?</h1>
+          <p class="lede">If the answer is <strong>yes</strong>, we'd love to open the Scriptures together in a friendly, no‑pressure study—free, local, and scheduled around you.</p>
+          <div class="stack">
+            <a class="btn" href="mailto:WantABibleStudy@gmail.com?subject=Bible%20Study%20Inquiry">Email Us</a>
+            <a class="btn btn-outline" href="#how">How it works</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card" aria-label="Quick Details">
+          <h3 style="margin-top:0">Quick Details</h3>
+          <ul style="margin:0;padding-left:1.1rem;line-height:1.8">
+            <li>One‑on‑one or small group</li>
+            <li>Meet in person or online</li>
+            <li>Bring your questions—beginners welcome</li>
+            <li>Always free</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="grid">
+      <div class="card">
+        <h3 style="margin-top:0">1) Say hello</h3>
+        <p>Send a quick email with the times you’re available and any topics you’re curious about.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">2) Pick a time & place</h3>
+        <p>We can meet at a coffee shop, library, home, or online—whatever is easiest for you.</p>
+      </div>
+     
+    </section>
+
+    <p class="verse">“All Scripture is inspired by God and profitable… for training in righteousness.” — 2&nbsp;Timothy&nbsp;3:16</p>
+
+    <section id="contact" class="card" style="margin-top:1.5rem">
+      <h2 style="margin-top:0">Contact</h2>
+      <p class="lede" style="margin-top:.25rem">Ready to start or want more info?</p>
+      <p class="contact" style="font-size:1.1rem"><strong>Email: WantABibleStudy@gmail.com</strong> <a href="mailto:WantABibleStudy@gmail.com?subject=Bible%20Study%20Inquiry">WantABibleStudy@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      <div>© <span id="y"></span> Want a Bible Study</div>
+      <div></div>
+    </div>
+  </footer>
+
+  <script>
+    // small nicety to keep the year current
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
