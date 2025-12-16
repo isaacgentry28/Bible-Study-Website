@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bible Study Articles by Subject</title>
+  <meta name="description" content="Articles and study guides organized by subject to help you dig into Scripture." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sand:#f7f1e9;
+      --ink:#12141f;
+      --muted:#4d5060;
+      --accent:#c44528;
+      --accent-soft:#e8b989;
+      --panel:#ffffff;
+      --shadow:0 18px 50px rgba(14,19,31,0.12);
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      font-family:"Manrope",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:radial-gradient(circle at 15% 20%, rgba(196,69,40,0.08), transparent 35%),
+                 radial-gradient(circle at 80% 0%, rgba(22,36,73,0.12), transparent 32%),
+                 var(--sand);
+      min-height:100vh;
+    }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .wrapper { max-width:1180px; margin:0 auto; padding:1.5rem 1.75rem 3rem; }
+    header {
+      position:sticky; top:0; z-index:10;
+      background:rgba(247,241,233,0.85);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(0,0,0,0.04);
+    }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .brand { display:flex; align-items:center; gap:.75rem; font-weight:700; color:var(--accent); letter-spacing:.02em; }
+    .brand img { width:54px; height:54px; border-radius:14px; object-fit:cover; box-shadow:0 8px 20px rgba(0,0,0,0.08); }
+    .brand span { font-family:"DM Serif Display","Manrope",serif; font-size:1.2rem; color:var(--ink); }
+    nav ul { margin:0; padding:0; list-style:none; display:flex; gap:1rem; align-items:center; }
+    nav a { font-weight:600; color:var(--ink); }
+    .hero { padding:2.5rem 0 1.5rem; display:grid; grid-template-columns:1.1fr 1fr; gap:2rem; align-items:center; }
+    .hero-card { background:var(--panel); border-radius:22px; padding:1.5rem; box-shadow:var(--shadow); border:1px solid rgba(0,0,0,0.04); }
+    .pill { display:inline-flex; align-items:center; gap:.5rem; padding:.4rem .75rem; border-radius:999px; background:rgba(196,69,40,0.12); color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:.05em; font-size:.75rem; }
+    h1, h2 { font-family:"DM Serif Display","Manrope",serif; margin:0; }
+    .lede { color:var(--muted); margin:.6rem 0 1rem; font-size:1.05rem; }
+    .filters { display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.5rem; }
+    .chip { padding:.4rem .7rem; border-radius:12px; background:rgba(18,20,31,0.06); color:var(--muted); font-weight:600; font-size:.9rem; }
+    .section { margin-top:2.5rem; }
+    .section h2 { font-size:1.7rem; margin-bottom:.2rem; }
+    .section p { color:var(--muted); margin:0 0 1rem; }
+    .articles { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; }
+    .card { background:var(--panel); border-radius:18px; padding:1.1rem 1.2rem; border:1px solid rgba(0,0,0,0.05); box-shadow:var(--shadow); display:flex; flex-direction:column; gap:.5rem; }
+    .card h3 { margin:.2rem 0 0; }
+    .label { display:inline-flex; align-items:center; padding:.35rem .6rem; border-radius:10px; background:rgba(196,69,40,0.12); color:var(--accent); font-weight:700; font-size:.85rem; }
+    .meta { color:var(--muted); font-size:.95rem; margin:0; }
+    footer { margin-top:2.5rem; border-top:1px solid rgba(0,0,0,0.05); background:rgba(255,255,255,0.7); }
+    footer .wrapper { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem; padding:1.2rem 1.75rem; }
+    @media (max-width:900px) {
+      .hero { grid-template-columns:1fr; }
+      header { position:sticky; top:0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper nav">
+      <div class="brand">
+        <img src="images/Bible%20Image.jpg" alt="Bible with cross logo" loading="lazy">
+        <span>Want a Bible Study</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#subjects">Subjects</a></li>
+          <li><a href="mailto:WantABibleStudy@gmail.com?subject=Bible%20Study%20Inquiry">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <section class="hero">
+      <div>
+        <div class="pill">Articles by subject</div>
+        <h1 style="margin-top:.35rem;">Study notes you can read, share, and discuss.</h1>
+        <p class="lede">Browse helpful articles and study guides organized by topic. Use them on your own or as a starting point for our next conversation.</p>
+        <div class="filters">
+          <span class="chip">Archeology</span>
+          <span class="chip">Evidences</span>
+          <span class="chip">Prayer</span>
+          <span class="chip">Old Testament</span>
+          <span class="chip">How to study</span>
+        </div>
+      </div>
+      <div>
+        <div class="hero-card">
+          <h3 style="margin:.2rem 0 .4rem;">Need a custom topic?</h3>
+          <p class="lede" style="margin:0 0 1rem;">If there is a passage or question on your heart, let me know. I would love to prepare something tailored for you.</p>
+          <a class="label" href="mailto:WantABibleStudy@gmail.com?subject=Article%20Request">Email a request</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="subjects" class="section">
+      <h2>Archeology</h2>
+      <p></p>
+      <div class="articles">
+        <div class="card">
+          <div class="label">Archeology</div>
+          <h3><a href="https://www.facebook.com/share/p/1BWUpjJDQ4/?mibextid=wwXIfr" aria-label="2700 Year old Tunnel Exactly where the bible says">2700 Year Old Biblical Tunnel</a></h3>
+          <p class="meta">2700 Year old Tunnel Exactly where the bible says</p>
+        </div>
+        <div class="card">
+          <div class="label">Archeology</div>
+          <h3><a href="https://www.facebook.com/share/p/1KPBFScUEq/?mibextid=wwXIfr" aria-label="Read article on Sermon on the Mount">Shocking Antartic Fossil Forests</a></h3>
+          <p class="meta">Antarctic Fossil Forrests</p>
+        </div>
+        <div class="card">
+          <div class="label">Gospels</div>
+          <h3><a href="#" aria-label="Read article on parables">Why Jesus taught in parables</a></h3>
+          <p class="meta">Understanding stories that invite us to listen with faith.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Christian living</h2>
+      <p>Practical encouragement rooted in Scripture.</p>
+      <div class="articles">
+        <div class="card">
+          <div class="label">Christian living</div>
+          <h3><a href="#" aria-label="Read article on forgiveness">Learning forgiveness</a></h3>
+          <p class="meta">How Jesus teaches us to forgive and heal relationships.</p>
+        </div>
+        <div class="card">
+          <div class="label">Christian living</div>
+          <h3><a href="#" aria-label="Read article on rest">Rest that restores</a></h3>
+          <p class="meta">Sabbath rhythms and trusting God with your pace.</p>
+        </div>
+        <div class="card">
+          <div class="label">Christian living</div>
+          <h3><a href="#" aria-label="Read article on generosity">Generosity as worship</a></h3>
+          <p class="meta">Why giving is joyful and how to practice it wisely.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Prayer</h2>
+      <p>Grow confident in speaking and listening to God.</p>
+      <div class="articles">
+        <div class="card">
+          <div class="label">Prayer</div>
+          <h3><a href="#" aria-label="Read article on Lord's Prayer">Walking through the Lord's Prayer</a></h3>
+          <p class="meta">Line by line, how Jesus taught us to pray.</p>
+        </div>
+        <div class="card">
+          <div class="label">Prayer</div>
+          <h3><a href="#" aria-label="Read article on unanswered prayer">When prayers feel unanswered</a></h3>
+          <p class="meta">Trusting God's timing and goodness when waiting is hard.</p>
+        </div>
+        <div class="card">
+          <div class="label">Prayer</div>
+          <h3><a href="#" aria-label="Read article on gratitude">Prayers of gratitude</a></h3>
+          <p class="meta">Practices that turn everyday moments into praise.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How to study</h2>
+      <p>Simple tools for reading, understanding, and applying Scripture.</p>
+      <div class="articles">
+        <div class="card">
+          <div class="label">Study skills</div>
+          <h3><a href="#" aria-label="Read article on context">Reading with context</a></h3>
+          <p class="meta">Audience, setting, and big themes to look for.</p>
+        </div>
+        <div class="card">
+          <div class="label">Study skills</div>
+          <h3><a href="#" aria-label="Read article on study rhythm">Building a study rhythm</a></h3>
+          <p class="meta">Setting a pace you can sustain with joy, not guilt.</p>
+        </div>
+        <div class="card">
+          <div class="label">Study skills</div>
+          <h3><a href="#" aria-label="Read article on sharing scripture">Sharing what you learn</a></h3>
+          <p class="meta">Talking about Scripture with kindness and clarity.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      <div>© <span id="y"></span> Want a Bible Study</div>
+      <div><a href="index.html">Back to home</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // keep the year current
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

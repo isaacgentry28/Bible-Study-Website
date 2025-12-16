@@ -4,58 +4,81 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Want a Bible Study?</title>
-  <meta name="description" content="Simple website to invite people to Bible studies—clear, friendly, and easy to contact." />
+  <meta name="description" content="A warm invite to open the Scriptures together. Free, flexible, and centered on Jesus." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --red-700:#b91c1c; /* main red from card */
-      --red-600:#dc2626;
-      --red-50:#fef2f2;
-      --ink:#1f2937;     /* gray-800 */
-      --ink-600:#374151;  /* gray-700 */
-      --link:#1e3a8a;    /* navy link */
-      --bg:#ffffff;
+    :root {
+      --sand:#f7f1e9;
+      --ink:#12141f;
+      --muted:#4d5060;
+      --accent:#c44528;
+      --accent-soft:#e8b989;
+      --panel:#ffffff;
+      --shadow:0 18px 50px rgba(14,19,31,0.12);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);}
-    a{color:var(--link)}
-    .btn{display:inline-block;background:var(--red-700);color:#fff;text-decoration:none;padding:.9rem 1.25rem;border-radius:.75rem;font-weight:700;letter-spacing:.2px;border:2px solid var(--red-700);}
-    .btn:hover{background:var(--red-600);border-color:var(--red-600)}
-    .btn-outline{background:transparent;color:var(--red-700)}
-    .wrapper{max-width:1100px;margin-inline:auto;padding:2rem;}
-    header{border-bottom:1px solid #eee;background:var(--bg);position:sticky;top:0;backdrop-filter:saturate(1.2) blur(8px)}
-    .brand{display:flex;align-items:center;gap:.75rem;font-weight:800;color:var(--red-700);}
-    .brand svg{width:36px;height:36px}
-    .nav{display:flex;align-items:center;justify-content:space-between;}
-    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:center;padding-block:3.5rem}
-    .hero-card{border-left:6px solid var(--red-700);padding:1.25rem 1.25rem 1.25rem 1.1rem;background:var(--red-50);border-radius:1rem}
-    .hero h1{font-size:clamp(1.8rem,3vw,2.6rem);margin:.5rem 0 0 0;line-height:1.15}
-    .lede{font-size:1.1rem;color:var(--ink-600);margin:.75rem 0 1.25rem}
-    .stack{display:flex;gap:.75rem;flex-wrap:wrap}
-    .card{border:1px solid #eee;border-radius:1rem;padding:1.25rem;background:#fff}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-    .verse{margin-top:3rem;color:#6b7280;font-size:.95rem;text-align:center}
-    footer{margin-top:3rem;background:var(--red-700);color:#fff}
-    footer .wrapper{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding-block:1.25rem}
-    .contact a{color:#fff;text-decoration:underline}
-    /* Dropdown menu styles */
-    .dropdown{position:relative;display:inline-block}
-    .dropdown-toggle{background:transparent;color:var(--red-700);text-decoration:none;padding:.9rem 1.25rem;border-radius:.75rem;font-weight:700;letter-spacing:.2px;border:2px solid var(--red-700);cursor:pointer;display:inline-flex;align-items:center;gap:.5rem}
-    .dropdown-toggle:hover{background:var(--red-50)}
-    .dropdown-content{display:none;position:absolute;right:0;background:#fff;min-width:200px;box-shadow:0 8px 16px rgba(0,0,0,.1);border-radius:.75rem;border:1px solid #eee;margin-top:.25rem;z-index:1000}
-    .dropdown-content a{color:var(--ink);padding:.75rem 1.25rem;text-decoration:none;display:block;transition:background .2s}
-    .dropdown-content a:hover{background:var(--red-50)}
-    .dropdown-content a:first-child{border-radius:.75rem .75rem 0 0}
-    .dropdown-content a:last-child{border-radius:0 0 .75rem .75rem}
-    .dropdown.active .dropdown-content{display:block}
-    .dropdown-arrow{display:inline-block;margin-left:.25rem;transition:transform .2s}
-    .dropdown.active .dropdown-arrow{transform:rotate(180deg)}
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .grid{grid-template-columns:1fr}
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      font-family:"Manrope",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:radial-gradient(circle at 15% 20%, rgba(196,69,40,0.08), transparent 35%),
+                 radial-gradient(circle at 80% 0%, rgba(22,36,73,0.12), transparent 32%),
+                 var(--sand);
+      min-height:100vh;
+    }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .wrapper { max-width:1180px; margin:0 auto; padding:1.5rem 1.75rem 3rem; }
+    header {
+      position:sticky; top:0; z-index:10;
+      background:rgba(247,241,233,0.85);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(0,0,0,0.04);
+    }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .brand { display:flex; align-items:center; gap:.75rem; font-weight:700; color:var(--accent); letter-spacing:.02em; }
+    .brand img { width:64px; height:64px; border-radius:14px; object-fit:cover; box-shadow:0 8px 20px rgba(0,0,0,0.08); }
+    .brand span { font-family:"DM Serif Display","Manrope",serif; font-size:1.3rem; color:var(--ink); }
+    nav ul { margin:0; padding:0; list-style:none; display:flex; gap:1rem; align-items:center; }
+    nav a { font-weight:600; color:var(--ink); }
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:.35rem; padding:.85rem 1.2rem; border-radius:12px; font-weight:700;
+      border:2px solid var(--accent); color:#fff; background:linear-gradient(135deg,#d95c3f,#b3361c);
+      box-shadow:0 12px 30px rgba(196,69,40,0.22);
+      transition:transform .12s ease, box-shadow .12s ease, background .15s ease;
+    }
+    .btn:hover { transform:translateY(-1px); box-shadow:0 14px 34px rgba(196,69,40,0.28); text-decoration:none; }
+    .btn.secondary { background:transparent; color:var(--accent); box-shadow:none; border-color:rgba(196,69,40,0.4); }
+    .pill { display:inline-flex; align-items:center; gap:.5rem; padding:.4rem .75rem; border-radius:999px; background:rgba(196,69,40,0.12); color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:.05em; font-size:.75rem; }
+    .hero { display:grid; grid-template-columns:1.2fr 1fr; gap:2.5rem; align-items:center; padding:3rem 0 2rem; }
+    .hero-card { background:var(--panel); border-radius:24px; padding:1.5rem; box-shadow:var(--shadow); border:1px solid rgba(0,0,0,0.04); }
+    .hero h1 { font-family:"DM Serif Display","Manrope",serif; font-size:clamp(2.1rem,3vw,2.7rem); margin:.4rem 0 .35rem; line-height:1.15; letter-spacing:.01em; }
+    .lede { color:var(--muted); font-size:1.05rem; margin:0 0 1.25rem; }
+    .stack { display:flex; gap:.75rem; flex-wrap:wrap; }
+    .hero-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1rem; margin-top:1.25rem; }
+    .feature { padding:1rem 1.1rem; border-radius:16px; background:linear-gradient(145deg,rgba(232,185,137,0.2),rgba(255,255,255,0.7)); border:1px solid rgba(0,0,0,0.04); box-shadow:0 8px 24px rgba(0,0,0,0.06); }
+    .feature h4 { margin:.15rem 0 .35rem; font-size:1.05rem; }
+    .section { margin-top:3rem; }
+    .section h2 { font-family:"DM Serif Display","Manrope",serif; font-size:1.9rem; margin:0 0 .3rem; }
+    .section p { color:var(--muted); margin:0 0 1.25rem; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; }
+    .card { background:var(--panel); border-radius:18px; padding:1.2rem 1.25rem; border:1px solid rgba(0,0,0,0.05); box-shadow:var(--shadow); }
+    .card h3 { margin:.2rem 0 .4rem; }
+    .step { display:flex; gap:.85rem; align-items:flex-start; }
+    .step .num { width:36px; height:36px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; font-weight:700; color:var(--accent); background:rgba(196,69,40,0.12); }
+    .details { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; margin-top:1rem; }
+    .tag { display:inline-flex; align-items:center; padding:.3rem .6rem; border-radius:10px; background:rgba(18,20,31,0.06); color:var(--muted); font-weight:600; font-size:.85rem; }
+    .verse { margin:3rem auto 2rem; color:var(--muted); text-align:center; font-size:1rem; max-width:780px; background:rgba(18,20,31,0.04); padding:1rem 1.25rem; border-radius:14px; border:1px solid rgba(0,0,0,0.03); }
+    footer { margin-top:2.5rem; border-top:1px solid rgba(0,0,0,0.05); background:rgba(255,255,255,0.7); }
+    footer .wrapper { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem; padding:1.2rem 1.75rem; }
+    .contact-card { display:flex; flex-direction:column; gap:.5rem; font-size:1.05rem; }
+    .contact-card strong { color:var(--ink); }
+    @media (max-width:900px) {
+      .hero { grid-template-columns:1fr; padding:2rem 0 1rem; }
+      header { position:sticky; top:0; }
     }
   </style>
 </head>
@@ -63,25 +86,15 @@
   <header>
     <div class="wrapper nav">
       <div class="brand" aria-label="Want a Bible Study">
-  <!-- Simple open book + cross icon -->
-  <img src="images/Bible%20Image.jpg" alt="Bible with cross logo (photo file: Bible Image.jpg)" width="96" height="96" loading="lazy">
-
+        <img src="images/Bible%20Image.jpg" alt="Bible with cross logo" width="96" height="96" loading="lazy">
         <span>Want a Bible Study</span>
       </div>
-      <nav style="display:flex;gap:.75rem;align-items:center">
-        <div class="dropdown" id="articlesDropdown">
-          <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-            Articles
-            <span class="dropdown-arrow">▼</span>
-          </button>
-          <div class="dropdown-content">
-            <a href="https://example.com/article1" target="_blank" rel="noopener">Getting Started with Bible Study</a>
-            <a href="https://example.com/article2" target="_blank" rel="noopener">Understanding Scripture</a>
-            <a href="https://example.com/article3" target="_blank" rel="noopener">Prayer and Faith</a>
-            <a href="https://example.com/article4" target="_blank" rel="noopener">Living as a Christian</a>
-          </div>
-        </div>
-        <a class="btn btn-outline" href="#contact">Contact</a>
+      <nav>
+        <ul>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="articles.html">Articles by subject</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -89,88 +102,97 @@
   <main class="wrapper">
     <section class="hero">
       <div>
-        <div class="hero-card">
-          <strong style="color:var(--red-700);text-transform:uppercase;letter-spacing:.08em">Ask yourself</strong>
-          <h1>Are you interested in pleasing God but not sure what He wants?</h1>
-          <p class="lede">If the answer is <strong>yes</strong>, id love to open the Scriptures together in a friendly, no‑pressure study—free, local, and scheduled around you.</p>
-          <div class="stack">
-            <a class="btn" href="mailto:WantABibleStudy@gmail.com?subject=Bible%20Study%20Inquiry">Email Us</a>
-            <a class="btn btn-outline" href="#how">How it works</a>
+        <div class="pill" aria-label="Friendly invitation">Open Bible, open chairs</div>
+        <h1>Grow closer to God with a guided, personal Bible study.</h1>
+        <p class="lede">Bring your questions, curiosity, and schedule. We will open the Scriptures together at a pace that fits you, in person or online, always free.</p>
+        <div class="stack">
+          <a class="btn" href="mailto:WantABibleStudy@gmail.com?subject=Bible%20Study%20Inquiry">Request a study</a>
+          <a class="btn secondary" href="#how">See how it works</a>
+        </div>
+        <div class="hero-grid">
+          <div class="feature">
+            <h4>Beginner friendly</h4>
+            <p class="lede" style="margin:0;">No pressure, no jargon. We start where you are.</p>
+          </div>
+          <div class="feature">
+            <h4>Flexible format</h4>
+            <p class="lede" style="margin:0;">Coffee shop, living room, or video call. Your choice.</p>
+          </div>
+          <div class="feature">
+            <h4>Centered on Christ</h4>
+            <p class="lede" style="margin:0;">Scripture first, with room for real questions.</p>
           </div>
         </div>
       </div>
       <div>
-        <div class="card" aria-label="Quick Details">
-          <h3 style="margin-top:0">Quick Details</h3>
-          <ul style="margin:0;padding-left:1.1rem;line-height:1.8">
-            <li>One‑on‑one or small group</li>
-            <li>Meet in person or online</li>
-            <li>Bring your questions—beginners welcome</li>
-            <li>Always free</li>
+        <div class="hero-card" aria-label="Quick details">
+          <div class="tag">What to expect</div>
+          <h3 style="margin:.35rem 0 .25rem;">In one glance</h3>
+          <ul style="margin:.5rem 0 0; padding-left:1.1rem; line-height:1.7; color:var(--muted);">
+            <li>30-60 minute sessions you can schedule weekly or as available</li>
+            <li>One-on-one, with a friend, or small group</li>
+            <li>Topics tailored to your questions and goals</li>
+            <li>Always free and shared with gentleness</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="how" class="grid">
-      <div class="card">
-        <h3 style="margin-top:0">1) Say hello</h3>
-        <a href="mailto:WantABibleStudy@gmail.com?subject=Bible%20Study%20Inquiry" aria-label="Email to say hello!">Email to request a study</a>
-        <p>Send a quick email with the times you’re available and any topics you’re curious about.</p>
+    <section id="how" class="section">
+      <h2>How it works</h2>
+      <p>Simple steps to start. We make space for honest conversation, prayer, and growth.</p>
+      <div class="grid">
+        <div class="card step">
+          <div class="num">1</div>
+          <div>
+            <h3>Say hello</h3>
+            <p class="lede">Send an email with the times that work and any questions on your mind.</p>
+            <a href="mailto:WantABibleStudy@gmail.com?subject=Bible%20Study%20Inquiry">Email to schedule</a>
+          </div>
+        </div>
+        <div class="card step">
+          <div class="num">2</div>
+          <div>
+            <h3>Pick a setting</h3>
+            <p class="lede">Meet at a coffee shop, library, home, or online. We will confirm what feels comfortable.</p>
+          </div>
+        </div>
+        <div class="card step">
+          <div class="num">3</div>
+          <div>
+            <h3>Study together</h3>
+            <p class="lede">Open the Bible, read, ask, and apply. We keep it practical and focused on Jesus.</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h3 style="margin-top:0">2) Pick a time & place</h3>
-        <p>We can meet at a coffee shop, library, home, or online—whatever is easiest for you.</p>
-      </div>
-     
     </section>
 
-    <p class="verse">“All Scripture is inspired by God and profitable… for training in righteousness.” — 2&nbsp;Timothy&nbsp;3:16</p>
+    <p class="verse">"All Scripture is breathed out by God and profitable for teaching, for reproof, for correction, and for training in righteousness." 2 Timothy 3:16</p>
 
-    <section id="contact" class="card" style="margin-top:1.5rem">
-      <h2 style="margin-top:0">Contact</h2>
-      <p class="lede" style="margin-top:.25rem">Ready to start or want more info?</p>
-      <p class="contact" style="font-size:1.1rem"><strong>Email: WantABibleStudy@gmail.com</strong> <a href="mailto:WantABibleStudy@gmail.com?subject=Bible%20Study%20Inquiry">WantABibleStudy@gmail.com</a></p>
+    <section id="contact" class="section card" style="margin-top:0;">
+      <h2 style="margin-top:0;">Contact</h2>
+      <p class="lede" style="margin-top:.25rem;">Ready to start or want more info? Reach out and we will respond soon.</p>
+      <div class="contact-card">
+        <strong>Email</strong>
+        <a href="mailto:WantABibleStudy@gmail.com?subject=Bible%20Study%20Inquiry">WantABibleStudy@gmail.com</a>
+      </div>
+      <div class="contact-card" style="margin-top:.75rem;">
+        <strong>Articles</strong>
+        <a href="articles.html">Browse studies by subject</a>
+      </div>
     </section>
   </main>
 
   <footer>
     <div class="wrapper">
       <div>© <span id="y"></span> Want a Bible Study</div>
-      <div></div>
+      <div><a href="articles.html">Articles by subject</a></div>
     </div>
   </footer>
 
   <script>
-    // small nicety to keep the year current
+    // keep the year current
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Dropdown menu functionality
-    const dropdown = document.getElementById('articlesDropdown');
-    const toggle = dropdown.querySelector('.dropdown-toggle');
-    
-    toggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      dropdown.classList.toggle('active');
-      toggle.setAttribute('aria-expanded', dropdown.classList.contains('active'));
-    });
-    
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!dropdown.contains(e.target)) {
-        dropdown.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-    
-    // Close dropdown when pressing Escape
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && dropdown.classList.contains('active')) {
-        dropdown.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.focus();
-      }
-    });
   </script>
 </body>
 </html>
